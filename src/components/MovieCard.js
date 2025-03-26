@@ -1,16 +1,21 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Card,Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 function MovieCard({ movie }) {
+  const navigate = useNavigate();
+
+  const handleBooking = () => {
+    navigate(`/movie/${movie.id}`); // Navigates to the booking page
+  };
+
+
   return (
-    <Card style={{ width: "18rem", margin: "10px" }}>
-      <Card.Img variant="top" src={movie.poster} />
+    <Card className="movie-card">
+      <Card.Img variant="top" src={movie.poster} alt={movie.title} className="movie-card-img" />
       <Card.Body>
         <Card.Title>{movie.title}</Card.Title>
-        <Button as={Link} to={`/movie/${movie.id}`} variant="primary">
-          View Details
-        </Button>
+        <Button variant="primary" onClick={handleBooking}>View Details</Button>
       </Card.Body>
     </Card>
   );

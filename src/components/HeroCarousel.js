@@ -18,7 +18,7 @@ const movies = [
     id: 3,
     title: "Avengers: Endgame",
     description: "The Avengers assemble once more to undo Thanos' actions.",
-    image: "https://via.placeholder.com/1200x500"
+    image: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/04/Avengers-Endgame-banner-poster.jpg"
   }
 ];
 

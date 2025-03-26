@@ -7,7 +7,7 @@ function MovieDetails() {
   return (
     <Container>
       <h1>Movie Details - {id}</h1>
-      <Button href="/booking">Book Tickets</Button>
+      <Button href="/book">Book Now</Button>
     </Container>
   );
 }
